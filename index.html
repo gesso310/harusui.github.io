@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>harusui</title>
+
+<style>
+body{
+    margin:0;
+    font-family:sans-serif;
+    text-align:center;
+    background: linear-gradient(135deg,#ff8a8a,#ffc3a0);
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+}
+
+.stars{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+}
+
+.star{
+    position:absolute;
+    color:white;
+    font-size:20px;
+    opacity:0.8;
+    animation: twinkle 2s infinite alternate;
+}
+
+.star1{ top:10%; left:15%; }
+.star2{ top:20%; right:18%; }
+.star3{ bottom:18%; left:20%; }
+.star4{ bottom:12%; right:15%; }
+.star5{ top:50%; left:8%; }
+.star6{ top:65%; right:10%; }
+
+@keyframes twinkle{
+    from{ opacity:0.3; transform:scale(1); }
+    to{ opacity:1; transform:scale(1.3); }
+}
+
+.container{
+    position:relative;
+    z-index:1;
+    background:rgba(255,255,255,0.9);
+    padding:50px 35px;
+    border-radius:30px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.15);
+    width:80%;
+    max-width:420px;
+    backdrop-filter: blur(6px);
+}
+
+.logo{
+    width:220px;
+    max-width:100%;
+    animation: floatLogo 3s ease-in-out infinite;
+}
+
+@keyframes floatLogo{
+    0%{ transform:translateY(0); }
+    50%{ transform:translateY(-10px); }
+    100%{ transform:translateY(0); }
+}
+
+h1{
+    font-size:48px;
+    margin:20px 0 10px 0;
+    color:#2b2b2b;
+}
+
+p{
+    color:#666;
+    margin-bottom:25px;
+    font-size:16px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 28px;
+    margin:10px 8px;
+    border-radius:999px;
+    text-decoration:none;
+    background:#2b2b2b;
+    color:white;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#444;
+    transform:scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<div class="stars">
+    <div class="star star1">★</div>
+    <div class="star star2">★</div>
+    <div class="star star3">★</div>
+    <div class="star star4">★</div>
+    <div class="star star5">★</div>
+    <div class="star star6">★</div>
+</div>
+
+<div class="container">
+    <img src="images/logo.png" class="logo">
+    <h1>harusui</h1>
+    <p>Welcome to his world</p>
+    <a href="games.html" class="btn">Games</a>
+    <a href="shop.html" class="btn">Shop</a>
+</div>
+
+</body>
+</html>
